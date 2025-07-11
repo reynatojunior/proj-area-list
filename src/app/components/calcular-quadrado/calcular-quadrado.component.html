@@ -1,0 +1,27 @@
+<div class="calculator-container">
+  <h2>Calculadora de Área Quadrada</h2>
+
+  <form class="area-form">
+    <div class="form-group">
+      <label for="lado">Lado do Quadrado (metros):</label>
+      <input
+        type="number"
+        id="lado"
+        [(ngModel)]="lado"
+        name="lado"
+        class="form-input"
+        placeholder="Digite o valor do lado"
+       />
+    </div>
+
+    <button type="button" class="calculate-btn" (click)="calcularArea(lado)">
+      Calcular Área
+    </button>
+  </form>
+
+  <div class="result-container">
+    <p class="result-text">
+      A área do quadrado é: <span class="result-value">{{ resultado }}</span> m²
+    </p>
+  </div>
+</div>

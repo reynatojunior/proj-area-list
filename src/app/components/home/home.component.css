@@ -1,0 +1,46 @@
+/* Centraliza o conteúdo da página e define um fundo suave */
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: center;
+}
+
+/* Estiliza o título principal */
+h1 {
+  color: #1c1e21;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Estiliza os botões */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Efeito ao clicar no botão */
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
