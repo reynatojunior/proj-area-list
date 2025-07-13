@@ -1,1 +1,34 @@
-<p>auth-api works!</p>
+<div class="post-container">
+  <h2>Posts da API</h2>
+  
+  @if (loading) {
+    <div class="loading">
+      Carregando posts...
+    </div>
+  }
+
+  @if (error) {
+    <div class="error">
+      Ocorreu um erro ao carregar os posts.
+    </div>
+  }
+
+  @if (!loading && !error && posts.length > 0) {
+    <table>
+      <thead>
+        <tr>
+          <th width="30%">Título</th>
+          <th width="70%">Conteúdo</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (post of posts; track post.id) {
+          <tr>
+            <td>{{ post.title }}</td>
+            <td>{{ post.body }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>
